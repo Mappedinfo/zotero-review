@@ -8,6 +8,8 @@ import {
 import { getString, initLocale } from "./utils/locale";
 import { registerPrefsScripts } from "./modules/preferenceScript";
 import { createZToolkit } from "./utils/ztoolkit";
+import { ReviewTabFactory } from "./modules/reviewTab";
+import { ColumnManagerFactory } from "./modules/columnManager";
 
 async function onStartup() {
   await Promise.all([
@@ -75,6 +77,9 @@ async function onMainWindowLoad(win: _ZoteroTypes.MainWindow): Promise<void> {
   UIExampleFactory.registerRightClickMenuPopup(win);
 
   UIExampleFactory.registerWindowMenuWithSeparator();
+
+  // 注册文献评审Tab菜单
+  ReviewTabFactory.registerReviewTab();
 
   PromptExampleFactory.registerNormalCommandExample();
 
@@ -175,6 +180,9 @@ function onDialogEvents(type: string) {
       break;
     case "vtableExample":
       HelperExampleFactory.vtableExample();
+      break;
+    case "columnManager":
+      ColumnManagerFactory.openColumnManager();
       break;
     default:
       break;

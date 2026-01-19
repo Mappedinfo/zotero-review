@@ -1,11 +1,110 @@
-# Zotero Plugin Template
+# Zotero Review - Literature Review Management Plugin
 
 [![zotero target version](https://img.shields.io/badge/Zotero-7-green?style=flat-square&logo=zotero&logoColor=CC2936)](https://www.zotero.org)
 [![Using Zotero Plugin Template](https://img.shields.io/badge/Using-Zotero%20Plugin%20Template-blue?style=flat-square&logo=github)](https://github.com/windingwind/zotero-plugin-template)
 
-This is a plugin template for [Zotero](https://www.zotero.org/).
+A Zotero plugin for managing literature reviews with customizable review fields and export capabilities.
 
-[English](README.md) | [简体中文](doc/README-zhCN.md) | [Français](doc/README-frFR.md)
+[English](README.md) | [简体中文](doc/README-zhCN.md)
+
+## Features
+
+- **📊 Dedicated Review Table View**: A specialized tab in Zotero's main window for literature review management
+- **🔧 Customizable Review Fields**: Add, edit, and delete custom fields with multiple data types (text, select, number, date, boolean)
+- **💾 Real-time Data Editing**: Edit review data directly in the table with automatic saving
+- **📤 Export Functionality**: Export review data to CSV or JSON formats for further analysis
+- **🌍 Multi-language Support**: English and Chinese interface
+- **🔄 Data Persistence**: All review data is stored in Zotero preferences and synced with your library
+
+## Installation
+
+1. Download the latest `.xpi` file from [Releases](https://github.com/mappedinfo/zotero-review/releases)
+2. In Zotero, go to `Tools` > `Add-ons`
+3. Click the gear icon and select `Install Add-on From File...`
+4. Choose the downloaded `.xpi` file
+5. Restart Zotero
+
+## Quick Start
+
+### Opening the Review View
+
+Access the literature review view through:
+- Menu: `Tools` > `Open Literature Review`
+
+### Managing Review Fields
+
+1. Click `Manage Fields` button in the toolbar
+2. Add, edit, or delete custom fields:
+   - **Field Name**: Display name of the field
+   - **Field Type**: text, select, number, date, or boolean
+   - **Options**: For select type, define available choices
+3. Click `Save` to apply changes
+
+### Conducting Literature Review
+
+1. Each row in the table represents a literature item
+2. Click on a row to locate the item in Zotero's main view
+3. Edit review data directly in the table:
+   - **Select fields**: Choose from dropdown options
+   - **Text/Number fields**: Type directly
+   - **Boolean fields**: Check or uncheck
+4. All changes are saved automatically
+
+### Exporting Review Data
+
+1. Click the `Export` button in the toolbar
+2. Choose format:
+   - **CSV**: For Excel and spreadsheet applications
+   - **JSON**: For programmatic processing
+3. Select save location
+
+## Default Review Fields
+
+The plugin comes with pre-configured fields suitable for systematic literature reviews:
+
+- **Relevance**: High / Medium / Low / Not Relevant
+- **Quality Score**: A / B / C / D
+- **Included**: Yes / No
+- **Review Notes**: Free text
+
+You can customize these fields or add your own based on your review protocol.
+
+## Use Cases
+
+### Systematic Literature Review
+
+1. **Screening Stage**: Mark inclusion/exclusion decisions
+2. **Full-text Review**: Record quality assessment and data extraction
+3. **Final Selection**: Track final inclusion decisions and export results
+
+### Research Project Management
+
+1. Track reading status of literature
+2. Rate relevance and importance
+3. Categorize by research methods or topics
+4. Record key findings and notes
+
+### Thesis Writing
+
+1. Organize literature by chapters
+2. Rate importance of sources
+3. Track citation methods and usage
+
+## Documentation
+
+- [📖 详细使用指南（中文）](doc/REVIEW-FEATURE-zhCN.md)
+- [📖 Development Documentation](https://zotero-chinese.com/plugin-dev-guide/)
+- [📖 Zotero 7 Developer Guide](https://www.zotero.org/support/dev/zotero_7_for_developers)
+
+## Technical Specifications
+
+- **Compatibility**: Zotero 7.0+
+- **Data Format**: JSON (internal storage) / CSV / JSON (export)
+- **Field Types**: text, select, number, date, boolean
+- **Storage**: Zotero Preferences
+- **Framework**: Based on [Zotero Plugin Template](https://github.com/windingwind/zotero-plugin-template)
+
+## Development
 
 - Documentation for plugins development
   - [📖 Plugin Development Documentation](https://zotero-chinese.com/plugin-dev-guide/) (Chinese, not yet complete)
